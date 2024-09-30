@@ -3,6 +3,8 @@ const messages = require('./lang/en/en.js');
 const http = require('http');
 const url = require('url');
 
+const port = process.env.PORT || 4000;
+
 class ServerHandler {
   constructor() {
     this.utility = new Utility();
@@ -77,4 +79,8 @@ const server = http.createServer((req, res) => {
     res.writeHead(404, { 'Content-Type': 'text/plain' });
     res.end(messages.four);
   };
+});
+
+server.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
