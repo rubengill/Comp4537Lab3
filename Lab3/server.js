@@ -47,10 +47,9 @@ class ServerHandler {
       res.writeHead(200, { 'Content-Type': 'text/html' });
       res.end(responseMessage);
     } catch (err) {
-      console.error(err);
       if (err.code === 'ENOENT') {
         res.writeHead(404, { 'Content-Type': 'text/plain' });
-        res.end(`404 File not found: ${filename}`);
+        res.end(`${four} ${filename}`);
       } else {
         res.writeHead(500, { 'Content-Type': 'text/plain' });
         res.end(messages.errorRead);

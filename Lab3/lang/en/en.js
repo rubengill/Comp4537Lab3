@@ -4,7 +4,7 @@ const messages = {
   successful: 'File written successfully',
   errorWrite: 'Error writing to file',
   errorRead: 'Error reading from file',
-  four: '404 Not Found'
+  four: '404 Not Found:'
 };
 
 module.exports = messages;
